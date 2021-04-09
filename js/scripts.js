@@ -1,24 +1,24 @@
 // Business Logic
-function Pizza() {
-  this.size = "Small";
+function Pizza(name) {
+  this.size = name;
   this.cheeses = [];
   this.veggies = [];
   this.meats = [];
   this.notes = "";
-  this.price = 12;
+  this.price = 11.99;
 }
 
 Pizza.prototype.addSize = function (size) {
   this.size = size;
   if (this.size === "Medium") {
-    this.price += 2;
-    return console.log("Medium Pizza + $2")
+    this.price += 2.99;
+    return console.log("Medium Pizza + $2.99")
   } else if (this.size === "Large") {
-    this.price += 4;
-    return console.log("Large Pizza + $4")
+    this.price += 4.99;
+    return console.log("Large Pizza + $4.99")
   } else if (this.size === "Extra Large") {
-    this.price += 6;
-    return console.log("Extra Large Pizza + $6")
+    this.price += 6.99;
+    return console.log("Extra Large Pizza + $6.99")
   } else {
     return console.log("Small Pizza + $0")
   }
@@ -26,20 +26,20 @@ Pizza.prototype.addSize = function (size) {
 
 Pizza.prototype.addCheese = function (cheese) {
   this.cheeses.push(cheese);
-  this.price += 1;
-  return console.log(cheese + " + $1")
+  this.price += .99;
+  return console.log(cheese + " + $0.99")
 }
 
 Pizza.prototype.addVeggie = function (veggie) {
   this.veggies.push(veggie);
-  this.price += 1.5;
-  return console.log(veggie + " + $1.50")
+  this.price += 1.49;
+  return console.log(veggie + " + $1.49")
 }
 
 Pizza.prototype.addMeat = function (meat) {
   this.meats.push(meat);
-  this.price += 2;
-  return console.log(meat + " + $2")
+  this.price += 1.99;
+  return console.log(meat + " + $1.99")
 }
 
 function Order() {
@@ -78,12 +78,27 @@ Order.prototype.calcTotal = function () {
   return total;
 }
 
-const pizza = new Pizza();
 const order = new Order();
-order.addPizza(pizza);
-order.calcSubTotal(order.pizzas);
-order.calcTax(order.subTotal)
-order.calcTotal(order.total)
+
 
 // UI Logic
 
+$(document).ready(function () {
+  let itemCount = 0;
+  $('form').submit(function (event) {
+    event.preventDefault();
+    const pizzaSizeInput = $('input.pizza-size:checked').val();
+    
+    let ingredients = []
+    const newPizza = new Pizza(pizzaSizeInput)
+
+
+
+    newPizza.addSize(pizzaSizeInput);
+    order.addPizza(newPizza);
+    order.calcSubTotal(order.pizzas);
+    order.calcTax(order.subTotal)
+    order.calcTotal(order.total)
+    itemCount ++;
+  });
+});
