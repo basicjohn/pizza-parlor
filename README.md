@@ -86,7 +86,7 @@ Code: Pizza.addCheese("Sausage");
 Expected Output: Pizza {
 size: "Large",
 cheeses: ["Mozzarella"],
-veggies: [],
+veggies: ["Bell Peppers"],
 meats: ["Sausage"]
 }
 
@@ -95,7 +95,7 @@ Test:
 Code:
 Expected Output:
 
-\Describe: order.prototype.pizzas()\
+\Describe: order.prototype.addPizza()\
 \Test:\
 \Code:\
 \Expected Output:\

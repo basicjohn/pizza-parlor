@@ -1,6 +1,6 @@
 // Business Logic
 function Pizza() {
-  this.size = "";
+  this.size = "Small";
   this.cheeses = [];
   this.veggies = [];
   this.meats = [];
@@ -42,9 +42,48 @@ Pizza.prototype.addMeat = function (meat) {
   return console.log(meat + " + $2")
 }
 
+function Order() {
+  this.pizzas = [];
+  this.subTotal = 0;
+  this.taxes = 0;
+  this.total = 0;
+}
 
+Order.prototype.addPizza = function (pizza) {
+  this.pizzas.push(pizza);
+  this.subTotal += pizza.total;
+}
 
-const pizza1 = new Pizza();
+Order.prototype.calcSubTotal = function (pizzas) {
+  var subTotal = 0;
+  this.pizzas.forEach(function (pizza) {
+    var price = pizza.price
+    subTotal += price;
+    console.log(subTotal);
+  });
+  this.subTotal = subTotal;
+  return subTotal;
+}
 
+Order.prototype.calcTax = function () {
+  var taxes = this.subTotal * .1;
+  this.taxes = taxes;
+  return taxes;
+}
+
+Order.prototype.calcTotal = function () {
+  var total = this.subTotal + this.taxes;
+  total = total.toFixed(2)
+  this.total = total;
+  return total;
+}
+
+const pizza = new Pizza();
+const order = new Order();
+order.addPizza(pizza);
+order.calcSubTotal(order.pizzas);
+order.calcTax(order.subTotal)
+order.calcTotal(order.total)
 
 // UI Logic
+
