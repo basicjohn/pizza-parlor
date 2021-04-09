@@ -34,7 +34,7 @@
 ## Specifications
 
 Describe: Pizza()
-Test: create a pizza with empty keys
+Test: create a pizza with empty keys and a key with the base price
 Code:
 const pizza1 = new Pizza();
 pizza1
@@ -43,24 +43,52 @@ Pizza {
 size: "" ,
 cheeses: [],
 veggies: [],
-meats: []
+meats: [],
+price: 12
 } 
 
 Describe: pizza.prototype.addSize()
 Test:
 Code: Pizza.addSize("Large");
-Expected Output: 
+Expected Output:
 Pizza {
 size: "Large",
 cheeses: [],
 veggies: [],
 meats: []
-} 
+price: 12
+}
 
 Describe: pizza.prototype.addCheese()
-Test: Pizza.addSize("Large");
-Code:
-Expected Output:
+Test: 
+Code: Pizza.addCheese("Mozzarella");
+Expected Output: Pizza {
+size: "Large",
+cheeses: ["Mozzarella"],
+veggies: [],
+meats: []
+price: 12
+}
+
+Describe: pizza.prototype.addVeggies()
+Test: 
+Code: Pizza.addVeggies("Bell Peppers");
+Expected Output: Pizza {
+size: "Large",
+cheeses: ["Mozzarella"],
+veggies: ["Bell Peppers"],
+meats: []
+}
+
+Describe: pizza.prototype.addMeats()
+Test: 
+Code: Pizza.addCheese("Sausage");
+Expected Output: Pizza {
+size: "Large",
+cheeses: ["Mozzarella"],
+veggies: [],
+meats: ["Sausage"]
+}
 
 Describe: order()
 Test:
