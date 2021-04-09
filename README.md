@@ -33,34 +33,39 @@
 
 ## Specifications
 
-\Describe: Pizza()\
-\Test: create a pizza with empty keys\
-\Code:
+Describe: Pizza()
+Test: create a pizza with empty keys
+Code:
 const pizza1 = new Pizza();
 pizza1
-\
-\Expected Output:
+Expected Output:
 Pizza {
-size: ,
+size: "" ,
 cheeses: [],
 veggies: [],
 meats: []
-} \
+} 
 
-\Describe: pizza.prototype.ingredients()\
-\Test:\
-\Code:\
-\Expected Output:\
+Describe: pizza.prototype.addSize()
+Test:
+Code: Pizza.addSize("Large");
+Expected Output: 
+Pizza {
+size: "Large",
+cheeses: [],
+veggies: [],
+meats: []
+} 
 
-\Describe: menu()\
-\Test:\
-\Code:\
-\Expected Output:\
+Describe: pizza.prototype.addCheese()
+Test: Pizza.addSize("Large");
+Code:
+Expected Output:
 
-\Describe: order()\
-\Test:\
-\Code:\
-\Expected Output:\
+Describe: order()
+Test:
+Code:
+Expected Output:
 
 \Describe: order.prototype.pizzas()\
 \Test:\
