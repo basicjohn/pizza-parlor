@@ -82,19 +82,59 @@ const order = new Order();
 
 
 // UI Logic
-
 $(document).ready(function () {
   let itemCount = 0;
   $('form').submit(function (event) {
     event.preventDefault();
     const pizzaSizeInput = $('input.pizza-size:checked').val();
-    
-    let ingredients = []
     const newPizza = new Pizza(pizzaSizeInput)
 
+    function getCheeses() {
+      console.log($('input.cheeses:checked').val());
+      let cheeses = $('input.cheeses:checked').map(function(index, element) {
+        let currentCheese = $(element).val()
+        newPizza.addCheese(currentCheese);
+      }).get();
+    };
 
+    function getMeats() {
+      console.log($('input.meats:checked').val());
+      let cheeses = $('input.meats:checked').map(function(index, element) {
+        let currentMeat = $(element).val()
+        newPizza.addMeat(currentMeat);
+      }).get();
+    };
+
+    function getVeggies() {
+      console.log($('input.veggies:checked').val());
+      let veggies = $('input.veggies:checked').map(function(index, element) {
+        let currentVeggie = $(element).val()
+        newPizza.addVeggie(currentVeggie);
+      }).get();
+    };
+
+  //   function printPizzaOrder () {
+
+
+      
+  //     for (var i = 0; i < order.pizzaz[i].cheeses.length; i++) {
+        
+  //       if (order.pizzaz[i].hasOwnProperty(key)) {
+  //           console.log(key + " -> " + p[key]);
+  //           $("#listOutput").append("<li>"  + element + "</li>");
+
+  //       }
+  //   }
+  //   }
+  //   for (var key of Object.keys(newObject)) {
+  //     console.log(key + " -> " + p[key])
+  // }
+    newPizza
 
     newPizza.addSize(pizzaSizeInput);
+    getCheeses();
+    getMeats();
+    getVeggies();
     order.addPizza(newPizza);
     order.calcSubTotal(order.pizzas);
     order.calcTax(order.subTotal)

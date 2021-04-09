@@ -51,6 +51,7 @@
                 name="pizza-size"
                 id="pizza-size2"
                 value="Medium"
+                checked
               />
               <label class="custom-control-label" for="pizza-size2"
                 >Medium</label
@@ -76,12 +77,95 @@
                 id="pizza-size4"
                 value="Extra Large"
               />
-              <label class="custom-control-label" for="pizza-size4"
-                >Extra Large</label
+              <label class="custom-control-label" for="pizza-size4">
+                Extra Large
+              </label>
+            </div>
+            <hr />
+
+            <h2>Toppings</h2>
+            <hr />
+
+            <h3>Cheeses</h3>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input cheeses"
+                name="cheeses"
+                id="extra-cheese"
+                value="Extra Cheese"
+              />
+              <label class="custom-control-label" for="extra-cheese"
+                >Extra Cheese</label
+              >
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input cheeses"
+                name="cheeses"
+                id="parmesan"
+                value="Parmesan"
+              />
+              <label class="custom-control-label" for="parmesan"
+                >Parmesan</label
               >
             </div>
             <hr />
-            <h2>Toppings</h2>
+
+            <h3>Meats</h3>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input meats"
+                name="meats"
+                id="pepperoni"
+                value="Pepperoni"
+              />
+              <label class="custom-control-label" for="pepperoni">
+                Pepperoni
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input meats"
+                name="meats"
+                id="canadian-bacon"
+                value="Canadian Bacon"
+              />
+              <label class="custom-control-label" for="canadian-bacon">
+                Canadian Bacon
+              </label>
+            </div>
+            <hr />
+
+            <h3>Veggies</h3>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input veggies"
+                name="veggies"
+                id="pineapple"
+                value="Pineapple"
+              />
+              <label class="custom-control-label" for="pineapple">
+                Pineapple
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input veggies"
+                id="artichoke"
+                value="Artichoke Hearts"
+              />
+              <label class="custom-control-label" for="artichoke">
+                Artichoke Hearts
+              </label>
+            </div>
+
+            <hr />
             <button type="submit" class="btn btn-dark" id="add-to-order">
               Add To Order
             </button>
