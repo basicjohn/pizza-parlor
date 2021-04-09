@@ -45,7 +45,7 @@ cheeses: [],
 veggies: [],
 meats: [],
 price: 12
-} 
+}
 
 Describe: pizza.prototype.addSize()
 Test:
@@ -60,7 +60,7 @@ price: 12
 }
 
 Describe: pizza.prototype.addCheese()
-Test: 
+Test:
 Code: Pizza.addCheese("Mozzarella");
 Expected Output: Pizza {
 size: "Large",
@@ -71,7 +71,7 @@ price: 12
 }
 
 Describe: pizza.prototype.addVeggies()
-Test: 
+Test:
 Code: Pizza.addVeggies("Bell Peppers");
 Expected Output: Pizza {
 size: "Large",
@@ -81,7 +81,7 @@ meats: []
 }
 
 Describe: pizza.prototype.addMeats()
-Test: 
+Test:
 Code: Pizza.addCheese("Sausage");
 Expected Output: Pizza {
 size: "Large",
