@@ -33,12 +33,26 @@
 
 ## Specifications
 
-\Describe: pizza()\
+\Describe: Pizza()\
+\Test: create a pizza with empty keys\
+\Code:
+const pizza1 = new Pizza();
+pizza1
+\
+\Expected Output:
+Pizza {
+size: ,
+cheeses: [],
+veggies: [],
+meats: []
+} \
+
+\Describe: pizza.prototype.ingredients()\
 \Test:\
 \Code:\
 \Expected Output:\
 
-\Describe: pizza.ingredients()\
+\Describe: menu()\
 \Test:\
 \Code:\
 \Expected Output:\
@@ -48,12 +62,12 @@
 \Code:\
 \Expected Output:\
 
-\Describe: order.pizzas()\
+\Describe: order.prototype.pizzas()\
 \Test:\
 \Code:\
 \Expected Output:\
 
-\Describe: order.calculateTotal()\
+\Describe: order.prototype.calculateTotal()\
 \Test:\
 \Code:\
 \Expected Output:\
