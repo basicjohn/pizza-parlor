@@ -33,16 +33,34 @@
 
 ## Specifications
 
-Describe: 
-Test: 
-Code: 
-Expected Output: 
+\Describe: pizza()\
+\Test:\
+\Code:\
+\Expected Output:\
 
+\Describe: pizza.ingredients()\
+\Test:\
+\Code:\
+\Expected Output:\
 
+\Describe: order()\
+\Test:\
+\Code:\
+\Expected Output:\
+
+\Describe: order.pizzas()\
+\Test:\
+\Code:\
+\Expected Output:\
+
+\Describe: order.calculateTotal()\
+\Test:\
+\Code:\
+\Expected Output:\
 
 ## Known Bugs
 
-- _ _
+- \_ \_
 
 ## License
 
