@@ -92,12 +92,36 @@
                 type="checkbox"
                 class="custom-control-input cheeses"
                 name="cheeses"
+                id="light-cheese"
+                value="Light Cheese"
+              />
+              <label class="custom-control-label" for="light-cheese">
+                Light Cheese
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input cheeses"
+                name="cheeses"
                 id="extra-cheese"
                 value="Extra Cheese"
               />
-              <label class="custom-control-label" for="extra-cheese"
-                >Extra Cheese</label
-              >
+              <label class="custom-control-label" for="extra-cheese">
+                Extra Cheese
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input cheeses"
+                name="cheeses"
+                id="3-cheese-blend"
+                value="3-Cheese Blend"
+              />
+              <label class="custom-control-label" for="3-cheese-blend">
+                3-Cheese Blend
+              </label>
             </div>
             <div class="custom-control custom-checkbox">
               <input
@@ -107,13 +131,35 @@
                 id="parmesan"
                 value="Parmesan"
               />
-              <label class="custom-control-label" for="parmesan"
-                >Parmesan</label
-              >
+              <label class="custom-control-label" for="parmesan">
+                Parmesan
+              </label>
             </div>
             <hr />
 
             <h3>Meats</h3>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input meats"
+                name="meats"
+                id="sausage"
+                value="Sausage"
+              />
+              <label class="custom-control-label" for="sausage">
+                Sausage
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input meats"
+                name="meats"
+                id="bacon"
+                value="Bacon"
+              />
+              <label class="custom-control-label" for="bacon">Bacon</label>
+            </div>
             <div class="custom-control custom-checkbox">
               <input
                 type="checkbox"
@@ -131,11 +177,33 @@
                 type="checkbox"
                 class="custom-control-input meats"
                 name="meats"
+                id="salami"
+                value="Salami"
+              />
+              <label class="custom-control-label" for="salami"> Salami </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input meats"
+                name="meats"
                 id="canadian-bacon"
                 value="Canadian Bacon"
               />
               <label class="custom-control-label" for="canadian-bacon">
                 Canadian Bacon
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input meats"
+                name="meats"
+                id="anchovies"
+                value="Anchovies"
+              />
+              <label class="custom-control-label" for="anchovies">
+                Anchovies
               </label>
             </div>
             <hr />
@@ -171,23 +239,28 @@
             </button>
           </form>
         </div>
-        <div class="col-md-3" id="pizza-tracker">
+        <div class="col-md-3" id="order-summary">
           <h2>Order</h2>
-          <hr />
-          <h4>Size</h4>
-          <ul class="size-output"></ul>
-          <hr />
-          <h4>Cheese</h4>
-          <ul class="cheese-output"></ul>
-          <hr />
-          <h4>Meat</h4>
-          <ul class="meat-output"></ul>
-          <hr />
-          <h4>Veggies</h4>
-          <ul class="veggies-output"></ul>
-          <hr />
+          <div id="order-output"></div>
+          <template id="pizza-item-output">
+            <h4>Pizza: <span class="size-output"></span></h4>
+            <hr />
+            <h4>Cheeses</h4>
+            <ul class="cheeses-output"></ul>
+            <hr />
+            <h4>Meats</h4>
+            <ul class="meats-output"></ul>
+            <hr />
+            <h4>Veggies</h4>
+            <ul class="veggies-output"></ul>
+          </template>
           <div class="row">
-            <h3>Total <span></span></h3>
+            <div class="col-md-12">
+              <h5>Subtotal: $<span id="subtotal-output"></span></h5>
+              <h5>Tax: $<span id="tax-output"></span></h5>
+              <h3>Total</h3>
+              <p>$<span id="total-output"></span></p>
+            </div>
           </div>
         </div>
       </main>
