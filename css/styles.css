@@ -2,7 +2,38 @@
 
 /* Header */
 
-/* Form Section */
+/* Pizza Builder */
+.custom-radio {
+  float: left;
+  width: 25%;
+  margin-bottom: 25px;
+}
+
+/* Order Summary */
+#order-summary h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#order-summary h4:first-of-type {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 800px;
+  background-color: rgb(121, 121, 121);
+}
+
+#order-summary ul {
+  list-style-type: none;
+}
+#order-summary hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /* Mobile Styles */
 @media only screen and (max-width: 600px) {

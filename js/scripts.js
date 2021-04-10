@@ -100,17 +100,17 @@ $(document).ready(function () {
     // Functions to print ingredients to the DOM
     function printCheeses(cheeses) {
       cheeses.forEach(element => {
-        $(".cheeses-output:first-of-type").append("<li class='cheese'/>" + element);
+        $(".order-item:first-of-type .cheeses-output:first-of-type").append("<li class='cheese'/>" + element);
       });
     };
     function printMeats(meats) {
       meats.forEach(element => {
-        $(".meats-output:nth-of-type(2)").append("<li class='meat'/>" + element);
+        $(".order-item:first-of-type .meats-output:nth-of-type(2)").append("<li class='meat'/>" + element);
       });
     };
     function printVeggies(veggies) {
       veggies.forEach(element => {
-        $(".veggies-output:nth-of-type(3)").append("<li class='veggie'/>" + element);
+        $(".order-item:first-of-type .veggies-output:nth-of-type(3)").append("<li class='veggie'/>" + element);
       });
     };
     // Creating new Pizza object & storing ingredents in object
@@ -127,7 +127,7 @@ $(document).ready(function () {
     // Printing everything to the #order-summary section
     var clone = template.content.cloneNode(true);
     orderOutput.prepend(clone);
-    $("h4:first-of-type .size-output").text(pizzaSizeInput);
+    $(".order-item:first-of-type h4 .size-output").text(pizzaSizeInput);
     printCheeses(order.pizzas[itemCount].cheeses);
     printMeats(order.pizzas[itemCount].meats);
     printVeggies(order.pizzas[itemCount].veggies);
