@@ -12,7 +12,8 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Source+Sans+Pro"
+      href="https://fonts.googleapis.com/css?family=Bitter|PT+Sans:400i"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
     <script
@@ -21,17 +22,18 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/scripts.js" defer></script>
-    <title>Steve's Pizza Place</title>
+    <title>Pomodoro 314</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Steve's Pizza Place</h1>
+        <h1>Pomodoro 314</h1>
+        <h2>Your Local Shop For The Perfect Tomato Pie</h2>
       </header>
       <main class="row">
-        <div class="col-md-9" id="pizza-builder">
-          <form>
-            <div class="choose-type-wrapper">
+        <div class="col-md-8" id="pizza-builder">
+          <form id="pizza-form">
+            <div id="choose-type-wrapper">
               <h2>Choose Pizza</h2>
               <div class="custom-control custom-radio">
                 <input
@@ -362,29 +364,36 @@
             </button>
           </form>
         </div>
-        <div class="col-md-3" id="order-summary">
-          <h2>Order</h2>
+        <div class="col-md-4" id="order-summary">
+          <h2>Your Order</h2>
           <div id="order-output"></div>
           <template id="pizza-item-output">
             <div class="order-item">
-              <h4>Pizza: <span class="size-output"></span></h4>
-              <hr />
-              <h4>Cheeses</h4>
-              <ul class="cheeses-output"></ul>
-              <hr />
-              <h4>Meats</h4>
-              <ul class="meats-output"></ul>
-              <hr />
-              <h4>Veggies</h4>
-              <ul class="veggies-output"></ul>
+              <h3>Pizza: <span class="size-output"></span></h3>
+              <div class="cheeses-output">
+                <h4>Cheeses<span> (+0.99 ea)</span></h4>
+                <hr />
+                <ul></ul>
+              </div>
+              <div class="meats-output">
+                <h4>Meats<span> (+1.99 ea)</span></h4>
+                <hr />
+                <ul></ul>
+              </div>
+              <div class="veggies-output">
+                <h4>Veggies<span> (+1.49 ea)</span></h4>
+                <hr />
+                <ul></ul>
+              </div>
             </div>
           </template>
           <div class="row">
-            <div class="col-md-12">
-              <h5>Subtotal: $<span id="subtotal-output"></span></h5>
-              <h5>Tax: $<span id="tax-output"></span></h5>
+            <div class="col-md-12" id="total-output-wrapper">
+              <hr />
+              <h5>Subtotal: $<span id="subtotal-output">0</span></h5>
+              <h5>Tax: $<span id="tax-output">0</span></h5>
               <h3>Total</h3>
-              <p>$<span id="total-output"></span></p>
+              <p>$<span id="total-output">0</span></p>
             </div>
           </div>
         </div>

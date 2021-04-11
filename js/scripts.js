@@ -99,19 +99,34 @@ $(document).ready(function () {
     };
     // Functions to print ingredients to the DOM
     function printCheeses(cheeses) {
-      cheeses.forEach(element => {
-        $(".order-item:first-of-type .cheeses-output:first-of-type").append("<li class='cheese'/>" + element);
-      });
+      if (cheeses.length === 0 ) {
+        $(".order-item:first-of-type .cheeses-output").remove();
+      }
+      else {
+        cheeses.forEach(element => {
+          $(".order-item:first-of-type .cheeses-output ul").append("<li class='cheese'/>" + element);
+        });
+      }
     };
     function printMeats(meats) {
-      meats.forEach(element => {
-        $(".order-item:first-of-type .meats-output:nth-of-type(2)").append("<li class='meat'/>" + element);
-      });
+      if (meats.length === 0 ) {
+        $(".order-item:first-of-type .meats-output").remove();
+      }
+      else {
+        meats.forEach(element => {
+          $(".order-item:first-of-type .meats-output ul").append("<li class='meat'/>" + element);
+        });
+      }
     };
     function printVeggies(veggies) {
-      veggies.forEach(element => {
-        $(".order-item:first-of-type .veggies-output:nth-of-type(3)").append("<li class='veggie'/>" + element);
-      });
+      if (veggies.length === 0 ) {
+        $(".order-item:first-of-type .veggies-output").remove();
+      }
+      else {
+        veggies.forEach(element => {
+          $(".order-item:first-of-type .veggies-output ul").append("<li class='veggie'/>" + element);
+        });
+      }
     };
     // Creating new Pizza object & storing ingredents in object
     const pizzaName = pizzaSizeInput + itemCount;
@@ -127,7 +142,7 @@ $(document).ready(function () {
     // Printing everything to the #order-summary section
     var clone = template.content.cloneNode(true);
     orderOutput.prepend(clone);
-    $(".order-item:first-of-type h4 .size-output").text(pizzaSizeInput);
+    $(".order-item:first-of-type h3 .size-output").text(pizzaSizeInput);
     printCheeses(order.pizzas[itemCount].cheeses);
     printMeats(order.pizzas[itemCount].meats);
     printVeggies(order.pizzas[itemCount].veggies);
@@ -135,5 +150,6 @@ $(document).ready(function () {
     $("#tax-output").append(order.taxes.toFixed(2));
     $("#total-output").append(order.total);
     itemCount ++;
+    $("#pizza-form")[0].reset();
   });
 });

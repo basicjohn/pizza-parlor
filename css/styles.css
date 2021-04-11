@@ -1,38 +1,161 @@
 /* Site Wide Styles */
+body {
+  font-family: "Bitter", Serif;
+  font-size: 16px;
+  background-color: #060c1e;
+  color: #343535;
+  padding: 10px;
+}
+.container {
+  background-color: #fff;
+  padding: 30px 50px 50px 50px;
+}
 
 /* Header */
+header h1,
+header h2 {
+  text-align: center;
+  font-family: "Bitter", Serif;
+  font-weight: bold;
+}
+header h1 {
+  font-size: 68px;
+  line-height: 68px;
+  color: #060c1e;
+
+}
+
+header h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #c96d3f;
+
+}
+header {
+  border-bottom: #dfddd5;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
 
 /* Pizza Builder */
+#pizza-builder h2 {
+  font-family: "PT Sans", Sans-Serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #060c1e;
+}
+#pizza-builder h3 {
+  font-family: "PT Sans", Sans-Serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #060c1e;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
 .custom-radio {
   float: left;
   width: 25%;
   margin-bottom: 25px;
+  padding: 10px;
+}
+.custom-control.custom-checkbox {
+  margin-left: 25px;
+  margin-top: 5px;
+}
+.custom-control.custom-checkbox label {
+  font-size: 20px;
+}
+.btn.btn-dark {
+  background-color: #c96d3f;
+  color: #000;
+  text-transform: uppercase;
+  border-color: #c96d3f;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 1000;
+  width: 50%;
+  margin-bottom: 25px;
 }
 
 /* Order Summary */
-#order-summary h4 {
+#order-summary {
+  position: relative;
+  border-radius: 12px;
+  background-color: #060c1e;
+  padding: 15px;
+  padding-bottom: 210px;
+}
+#order-summary h2 {
+  color: #fff;
+}
+#order-summary #order-output .order-item h3 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 800px;
+  color: #c96d3f;
+  margin: 0px;
+  padding: 5px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.cheeses-output h4,
+.meats-output h4,
+.veggies-output h4 {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
   margin: 0px;
-  padding: 0px;
+  padding: 5px;
+  text-align: right;
 }
-
-#order-summary h4:first-of-type {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 800px;
-  background-color: rgb(121, 121, 121);
+.cheeses-output h4 span,
+.meats-output h4 span,
+.veggies-output h4 span {
+  text-transform: lowercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
 }
-
-#order-summary ul {
+.order-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.cheeses-output ul,
+.meats-output ul,
+.veggies-output ul {
   list-style-type: none;
+  padding-left: 10px;
 }
 #order-summary hr {
   margin-top: 5px;
   margin-bottom: 5px;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#total-output-wrapper {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#total-output-wrapper hr {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-top: 1px solid #dfddd5;
+}
+#total-output-wrapper h5,
+#total-output-wrapper h5,
+#total-output-wrapper h3 {
+  text-align: right;
+}
+#total-output-wrapper p {
+  font-size: 48px;
 }
 
 /* Mobile Styles */
