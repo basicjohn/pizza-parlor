@@ -31,10 +31,12 @@
         <h2>Your Local Shop For The Perfect Tomato Pie</h2>
       </header>
       <main class="row">
+        <!-- Pizza Builder Form -->
         <div class="col-md-8" id="pizza-builder">
           <form id="pizza-form">
             <div id="choose-type-wrapper">
               <h2>Choose Pizza</h2>
+              <!-- Select Size of Pizza -->
               <div class="custom-control custom-radio">
                 <input
                   type="radio"
@@ -85,11 +87,11 @@
                 </label>
               </div>
             </div>
-
             <h2>Toppings</h2>
             <hr />
             <div class="row">
               <div class="col-md-6">
+                <!-- Select type of Cheeses -->
                 <div class="choose-cheeses-wrapper">
                   <h3>Cheeses</h3>
                   <div class="custom-control custom-checkbox">
@@ -142,6 +144,7 @@
                   </div>
                   <hr />
                 </div>
+                <!-- Select type of Meats -->
                 <div class="choose-meats-wrapper">
                   <h3>Meats</h3>
                   <div class="custom-control custom-checkbox">
@@ -231,6 +234,7 @@
                 </div>
               </div>
               <div class="col-md-6">
+                <!-- Select type of Vegetables -->
                 <div class="choose-veggies-wrapper">
                   <h3>Veggies</h3>
                   <div class="custom-control custom-checkbox">
@@ -364,8 +368,10 @@
             </button>
           </form>
         </div>
+
         <div class="col-md-4" id="order-summary">
           <h2>Your Order</h2>
+          <!-- Ouput for Order Items -->
           <div id="order-output"></div>
           <template id="pizza-item-output">
             <div class="order-item">
@@ -387,6 +393,7 @@
               </div>
             </div>
           </template>
+          <!-- Ouput for Order Total -->
           <div class="row">
             <div class="col-md-12" id="total-output-wrapper">
               <hr />

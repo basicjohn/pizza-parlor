@@ -23,7 +23,6 @@ header h1 {
   line-height: 68px;
   color: #060c1e;
 }
-
 header h2 {
   font-size: 24px;
   line-height: 30px;
@@ -102,7 +101,6 @@ button.btn.btn-dark:hover {
   text-align: right;
   text-transform: uppercase;
 }
-
 .cheeses-output h4,
 .meats-output h4,
 .veggies-output h4 {
@@ -176,11 +174,9 @@ footer {
   padding-left: 20%;
   padding-right: 20%;
 }
-
 footer a {
   color: #dfddd5;
 }
-
 footer a:hover {
   color: #060c1e;
 }
