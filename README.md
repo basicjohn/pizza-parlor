@@ -1,4 +1,4 @@
-# Steve's Pizza Place
+# Pomodoro 314
 
 #### _This is the Epicodus Pizza Parlor Project created by John Edmondson_
 
@@ -8,7 +8,7 @@
 
 ### Git Pages Link
 
-[Steve's Pizza Place (GitHub Pages)](http://basicjohn.github.io/pizza-parlor)
+[Pomodoro 314 (GitHub Pages)](http://basicjohn.github.io/pizza-parlor)
 
 ## Technologies Used
 
@@ -83,31 +83,74 @@ meats: []
 Describe: pizza.prototype.addMeats()
 Test:
 Code: Pizza.addCheese("Sausage");
-Expected Output: Pizza {
+Expected Output:
+Pizza {
 size: "Large",
 cheeses: ["Mozzarella"],
 veggies: ["Bell Peppers"],
 meats: ["Sausage"]
 }
 
-Describe: order()
-Test:
+Describe: Order()
+Test: Create an order object to house pizzas, subtotal, tax, and total
 Code:
+const order = new Order();
 Expected Output:
+order {
+pizzas: []
+this.subTotal = 0;
+this.taxes = 0;
+this.total = 0;
+}
 
-\Describe: order.prototype.addPizza()\
-\Test:\
-\Code:\
-\Expected Output:\
+Describe: order.prototype.addPizza()
+Test: add the created pizza to the order object
+Code:
+order.addPizza();
+Expected Output:
+order {
+pizzas: [
+Pizza {
+size: "Large",
+cheeses: ["Mozzarella"],
+veggies: ["Bell Peppers"],
+meats: ["Sausage"]
+price: 12
+}]
+this.subTotal = 0;
+this.taxes = 0;
+this.total = 0;
+}
 
-\Describe: order.prototype.calculateTotal()\
-\Test:\
-\Code:\
-\Expected Output:\
+Describe: Order.prototype.calcSubtotal()
+Test: add the price of each pizza together to get the subtotal
+Code:
+const pizza1 = 14
+const pizza2 = 16
+order.calcSubtotal()
+Expected Output:
+order.subtotal = 30
+
+Describe: Order.prototype.calcTax()
+Test: multiply subtotal by tax and return total tax
+Code:
+const subtotal = 10
+order.calcTax()
+Expected Output:
+order.tax = 1
+
+Describe: Order.prototype.calcTotal()
+Test: add subtotal and taxes together to get the
+Code:
+const subtotal = 10
+const tax = 1
+order.calcTotal()
+Expected Output:
+order.total = 11
 
 ## Known Bugs
 
-- \_ \_
+- \_Mobile Styles haven't been created\_
 
 ## License
 

@@ -22,14 +22,12 @@ header h1 {
   font-size: 68px;
   line-height: 68px;
   color: #060c1e;
-
 }
 
 header h2 {
   font-size: 24px;
   line-height: 30px;
   color: #c96d3f;
-
 }
 header {
   border-bottom: #dfddd5;
@@ -72,6 +70,7 @@ header {
   color: #000;
   text-transform: uppercase;
   border-color: #c96d3f;
+  border-width: 2px;
   border-radius: 12px;
   padding: 15px;
   font-size: 20px;
@@ -79,14 +78,16 @@ header {
   width: 50%;
   margin-bottom: 25px;
 }
+button.btn.btn-dark:hover {
+  border-color: #060c1e;
+}
 
 /* Order Summary */
 #order-summary {
   position: relative;
   border-radius: 12px;
   background-color: #060c1e;
-  padding: 15px;
-  padding-bottom: 210px;
+  padding: 15px 25px 220px 25px;
 }
 #order-summary h2 {
   color: #fff;
@@ -129,7 +130,14 @@ header {
 .meats-output ul,
 .veggies-output ul {
   list-style-type: none;
-  padding-left: 10px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.order-item li {
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #060c1e;
 }
 #order-summary hr {
   margin-top: 5px;
@@ -141,11 +149,10 @@ header {
   position: absolute;
   bottom: 0px;
   color: #fff;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 25px;
+  padding-right: 45px;
 }
 #total-output-wrapper hr {
-  margin-top: 5px;
   margin-bottom: 15px;
   border-top: 1px solid #dfddd5;
 }
@@ -154,8 +161,28 @@ header {
 #total-output-wrapper h3 {
   text-align: right;
 }
+#total-output-wrapper h3 {
+  font-size: 40px;
+}
 #total-output-wrapper p {
-  font-size: 48px;
+  font-size: 50px;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  color: #dfddd5;
+  padding-top: 75px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+footer a {
+  color: #dfddd5;
+}
+
+footer a:hover {
+  color: #060c1e;
 }
 
 /* Mobile Styles */
